@@ -366,8 +366,8 @@ public class IFDSTestReachingDefinitionsDynamic {
 		String sootcp = udir + File.separator + "test/junit-4.10.jar" + cpSep
 				+ udir + File.separator + "hamcrest-core-1.3.jar" + cpSep
 				+ udir + File.separator + "bin" + cpSep
-				+ "/usr/lib/jvm/java-6-sun/jre/lib/rt.jar" + cpSep
-				+ "/usr/lib/jvm/java-6-sun/jre/lib/jce.jar" + cpSep
+				+ "/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar" + cpSep
+				+ "/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar" + cpSep
 				+ "C:\\Program Files\\Java\\jre7\\lib\\rt.jar" + cpSep
 				+ "C:\\Program Files\\Java\\jre7\\lib\\jce.jar";
 		System.out.println("Soot classpath: " + sootcp);
@@ -463,13 +463,11 @@ public class IFDSTestReachingDefinitionsDynamic {
 			cpSep = ";";
 		
 		String udir = System.getProperty("user.dir");
-		String sootcp = udir + File.separator + "test/junit-4.10.jar" + cpSep
+		String sootcp = "/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar" + cpSep
+				+ udir + File.separator + "test/junit-4.10.jar" + cpSep
 				+ udir + File.separator + "hamcrest-core-1.3.jar" + cpSep
 				+ udir + File.separator + "bin" + cpSep
-				+ "/usr/lib/jvm/java-6-sun/jre/lib/rt.jar" + cpSep
-				+ "/usr/lib/jvm/java-6-sun/jre/lib/jce.jar" + cpSep
-				+ "C:\\Program Files\\Java\\jre7\\lib\\rt.jar" + cpSep
-				+ "C:\\Program Files\\Java\\jre7\\lib\\jce.jar";
+				+ "/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar";
 		System.out.println("Soot classpath: " + sootcp);
 		soot.Main.v().run(new String[] {
 				"-W",
